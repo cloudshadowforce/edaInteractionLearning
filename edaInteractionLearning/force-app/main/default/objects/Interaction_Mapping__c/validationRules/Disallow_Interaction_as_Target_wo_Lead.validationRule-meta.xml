@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disallow_Interaction_as_Target_wo_Lead</fullName>
+    <active>true</active>
+    <description>Interaction can only be the Target Object if Lead is the Source Object.</description>
+    <errorConditionFormula>ISPICKVAL(Target_Object_API_Name__c, &quot;Interaction__c&quot;) &amp;&amp; NOT(ISPICKVAL(Source_Object_API_Name__c, &quot;Lead&quot;))</errorConditionFormula>
+    <errorDisplayField>Target_Object_API_Name__c</errorDisplayField>
+    <errorMessage>Invalid Objects: Interaction cannot be the Target Object unless Lead is the Source Object.</errorMessage>
+</ValidationRule>
