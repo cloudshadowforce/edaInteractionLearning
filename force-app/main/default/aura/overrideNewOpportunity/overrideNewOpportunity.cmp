@@ -1,4 +1,9 @@
-<aura:component implements="lightning:actionOverride,lightning:isUrlAddressable,lightning:hasPageReference,force:hasRecordId" controller="OverrideNewOpportunityController" access="global">
+<aura:component implements="lightning:actionOverride,lightning:hasPageReference,force:hasRecordId,force:appHostable,flexipage:availableForAllPageTypes" controller="OverrideNewOpportunityController" access="global"> 
+    <aura:attribute name="pageReference" type="Object"/>
     <aura:attribute name="oppRecordTypeId" type="String"/>
+    <aura:attribute name="notB2B" type="Boolean"/>
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:if isTrue="{!v.notB2B}">
+    	NO ES POSIBLE CREAR UNA OPORTUNIDAD DE FORMA MANUAL        
+    </aura:if> 
 </aura:component>
