@@ -1,0 +1,4 @@
+<aura:component implements="lightning:actionOverride,lightning:isUrlAddressable,lightning:hasPageReference,force:hasRecordId" controller="OverrideNewOpportunityController" access="global">
+    <aura:attribute name="oppRecordTypeId" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+</aura:component>
